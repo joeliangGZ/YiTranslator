@@ -32,7 +32,6 @@ public class DocxServiceImpl implements DocxService {
 
     private final String productDir = "products/";
 
-
     public DocumentEntity extractContent(MultipartFile file) {
         try {
             // 生成唯一ID
@@ -166,7 +165,6 @@ public class DocxServiceImpl implements DocxService {
             throw new RuntimeException("文档填充异常.");
         }
     }
-
 
     private void processParagraph(XWPFParagraph paragraph, Map<Integer, String> contentMap) {
         String paragraphText = paragraph.getText();
